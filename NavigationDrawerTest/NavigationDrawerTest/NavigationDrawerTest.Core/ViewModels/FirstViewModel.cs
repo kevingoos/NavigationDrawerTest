@@ -8,8 +8,8 @@ namespace NavigationDrawerTest.Core.ViewModels
         string hello = "Hello MvvmCross";
         public string Hello
         {
-            get { return hello; }
-            set { SetProperty(ref hello, value); }
+            get => hello;
+            set => SetProperty(ref hello, value);
         }
     }
 }

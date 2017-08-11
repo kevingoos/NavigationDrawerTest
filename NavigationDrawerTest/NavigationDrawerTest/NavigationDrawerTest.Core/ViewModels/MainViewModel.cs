@@ -1,4 +1,5 @@
-﻿using MvvmCross.Core.Navigation;
+﻿using System.Threading.Tasks;
+using MvvmCross.Core.Navigation;
 using MvvmCross.Core.ViewModels;
 
 namespace NavigationDrawerTest.Core.ViewModels
@@ -12,5 +13,9 @@ namespace NavigationDrawerTest.Core.ViewModels
             _navigationService = navigationService;
         }
 
+        public override async Task Initialize()
+        {
+            await _navigationService.Navigate<FirstViewModel>();
+        }
     }
 }
