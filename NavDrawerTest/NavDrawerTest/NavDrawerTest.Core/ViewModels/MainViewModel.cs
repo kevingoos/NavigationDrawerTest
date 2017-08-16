@@ -11,11 +11,18 @@ namespace NavigationDrawerTest.Core.ViewModels
         public MainViewModel(IMvxNavigationService navigationService)
         {
             _navigationService = navigationService;
+            Init();
         }
 
-        public override async Task Initialize()
+        public async void Init()
         {
             await _navigationService.Navigate<FirstViewModel>();
         }
+
+        //Task Initialize not called
+        //public override async Task Initialize()
+        //{
+        //    ShowViewModel<FirstViewModel>();
+        //}
     }
 }

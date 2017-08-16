@@ -1,6 +1,9 @@
 using Android.Content;
 using MvvmCross.Core.ViewModels;
+using MvvmCross.Droid.Shared.Presenter;
 using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Droid.Views;
+using MvvmCross.Platform;
 using MvvmCross.Platform.Platform;
 
 namespace NavigationDrawerTest.Droid
@@ -19,6 +22,13 @@ namespace NavigationDrawerTest.Droid
         protected override IMvxTrace CreateDebugTrace()
         {
             return new DebugTrace();
+        }
+
+        protected override IMvxAndroidViewPresenter CreateViewPresenter()
+        {
+            var mvxFragmentsPresenter = new MvxFragmentsPresenter(AndroidViewAssemblies);
+            Mvx.RegisterSingleton<IMvxAndroidViewPresenter>(mvxFragmentsPresenter);
+            return mvxFragmentsPresenter;
         }
     }
 }

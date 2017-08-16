@@ -212,6 +212,10 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NavDrawerTest.Core\NavDrawerTest.Core.csproj">
+      <Project>{bfbcd101-71e3-4dcc-8cf1-7c4134e6335d}</Project>
+      <Name>NavDrawerTest.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NavigationDrawerTest.Core\NavigationDrawerTest.Core.csproj">
       <Project>{31d7792c-8339-4c32-8c91-123c9b248b83}</Project>
       <Name>NavigationDrawerTest.Core</Name>
