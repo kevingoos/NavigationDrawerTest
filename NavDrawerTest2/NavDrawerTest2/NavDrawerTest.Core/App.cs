@@ -12,7 +12,7 @@ namespace NavigationDrawerTest.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<StartViewModel>();
+            RegisterNavigationServiceAppStart<StartViewModel>();
         }
     }
 }

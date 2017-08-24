@@ -1,8 +1,10 @@
+using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform.IoC;
+using NavigationDrawerTest.Core.ViewModels;
 
 namespace NavigationDrawerTest.Core
 {
-    public class App : MvvmCross.Core.ViewModels.MvxApplication
+    public class App : MvxApplication
     {
         public override void Initialize()
         {
@@ -11,7 +13,7 @@ namespace NavigationDrawerTest.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterAppStart<ViewModels.MainViewModel>();
+            RegisterNavigationServiceAppStart<FirstViewModel>();
         }
     }
 }
